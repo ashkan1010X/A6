@@ -4,6 +4,7 @@ import { Row ,Col, Card } from "react-bootstrap"
 import ArtworkCard from "../components/ArtworkCard"
 export default function Favourites() {
     const [favouritesList] = useAtom(favouritesAtom);
+    
     if (!favouritesList) return null;
 
     return (

@@ -1,5 +1,6 @@
 import useSWR from 'swr';
 import {Card} from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 import Error from "next/error";
 import { useAtom } from 'jotai';
 import { favouritesAtom } from '../store.js';
