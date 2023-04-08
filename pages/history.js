@@ -35,25 +35,26 @@ export default function History() {
     </Card>
   ) : (
     <ListGroup>
-      {parsedHistory?.map((historyItem, index) => (
-        <ListGroup.Item
-          onClick={(e) => historyClicked(e, index)}
+    {parsedHistory?.map((historyItem, index) => (
+      <ListGroup.Item
+        key={index}
+        onClick={(e) => historyClicked(e, index)}
+      >
+        {Object.keys(historyItem).map((key) => (
+          <>
+            {key}: <strong>{historyItem[key]}</strong>&nbsp;
+          </>
+        ))}
+        <Button
+          className="float-end"
+          variant="danger"
+          size="sm"
+          onClick={(e) => removeHistoryClicked(e, index)}
         >
-          {Object.keys(historyItem).map((key) => (
-            <>
-              {key}: <strong>{historyItem[key]}</strong>&nbsp;
-            </>
-          ))}
-          <Button
-            className="float-end"
-            variant="danger"
-            size="sm"
-            onClick={(e) => removeHistoryClicked(e, index)}
-          >
-            &times;
-          </Button>
-        </ListGroup.Item>
-      ))}
-    </ListGroup>
+          &times;
+        </Button>
+      </ListGroup.Item>
+    ))}
+  </ListGroup>
   );
 }
