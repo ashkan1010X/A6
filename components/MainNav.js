@@ -48,7 +48,7 @@ export default function MainNav() {
         <>
             <Navbar bg="navbar-dark" expand="lg" className="fixed-top navbar-dark bg-dark" expanded={isExpanded}>
                 <Container>
-                    <Navbar.Brand>Shayan Asadpour</Navbar.Brand>
+                    <Navbar.Brand>ASHKAN ASADPOUR</Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={collapseNav} />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto">
